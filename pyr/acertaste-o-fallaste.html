@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Otra Página</title>
+</head>
+<body>
+<script>
+// Obtiene el mensaje almacenado en el localStorage
+var mensaje = localStorage.getItem("mensaje");
+
+// Realiza la acción correspondiente al mensaje
+if (mensaje) {
+    alert("Mensaje recibido: " + mensaje);
+    // Aquí puedes agregar la lógica para realizar la acción correspondiente al mensaje
+    
+    // Redirige a la página especificada por el mensaje
+    if (mensaje === "mensaje1") {
+        window.location.href = "acetaste.html";
+    } else if (mensaje === "mensaje2") {
+        window.location.href = "fallaste.html";
+    }
+} else {
+    alert("No se recibió ningún mensaje.");
+}
+</script>
+</body>
+</html>
